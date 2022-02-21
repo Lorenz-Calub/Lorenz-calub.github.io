@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lorenz Calub's Portfolio Page</title>
+    <script src="https://kit.fontawesome.com/a7a90b888f.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+  	<style>
+  		@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+:root{
+  --yellow: #FCBF49;
+  --white: #EAE2B7;
+  --blue: #003049;
+  --red: #D62828;
+}
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+}
+
+#navbar{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--yellow);
+  font-size: 1.5rem;
+  height: 4rem;
+ z-index: 1;
+}
+
+#navbar a{
+  display:inline-block;
+  margin: 2rem;
+  color: #0D2035;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s,color 0.3s;
+}
+
+#navbar a:hover{
+  color: var(--red);
+  transform: scale(1.1)
+}
+
+#welcome-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+}
+
+@media only screen and (max-width: 812px){
+  #welcome-section h1{
+    font-size: 4rem;
+    text-align: center;
+    }
+}
+
+#name{
+  display: inline-block;
+  transition: transform 1s;
+}
+
+
+
+#name:hover{
+  transform: translateY(-15%);
+}
+
+
+#title{
+  font-size: 5rem;
+  margin: 1%;
+}
+
+#subtitle{
+  display: inline-block;
+  font-size: 2rem;
+  border-left: solid 1px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 812px){
+  #subtitle{
+    display: block;
+    border-left: none;
+    font-size: 2rem;
+  }
+}
+
+#projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 3fr;
+  grid-template-areas:
+    "title title title"
+    "proj1 proj2 proj3";
+  justify-items: center;
+  width: 100%;
+  background-color: var(--blue);
+  color: #fff;
+  overflow-x: scroll;
+}
+
+@media only screen and (max-width: 812px){
+  #projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.project-div{
+  width: 50%;
+  height: auto;
+  padding: 0;
+  margin: 15%;
+  transition: transform 0.3s;
+}
+
+.project-div:hover{
+  transform: scale(1.1)
+}
+
+.project-div a p{
+  transition: color 0.5s;
+}
+
+.project-div:hover a p{
+  color: var(--red);
+}
+
+a{
+  text-decoration: none;
+}
+
+.project-tile{
+  text-align: center;
+  width: 100%;
+  padding: 3%;
+  margin: 0;
+  height: ;
+  color: #000;
+  font-size: 2rem;
+  background-color: var(--yellow);
+}
+
+.project-thumbnail{
+  width: 100%;
+}
+
+#project-sec-title{
+  grid-area: title;
+  text-align: center;
+}
+
+
+#contact-section{
+  display: inline-block;
+  width: 100%;
+  background-color: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 5%;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+#icon{
+  font-size: 4rem;
+  color: #fff;
+  transition: color 1s, transform 1s;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#icon:hover{
+  color: var(--blue);
+  transform: scale(1.5);
+}
+
+.email{
+  font-size: 1.5rem;
+}
+  	</style>
+  	
+ 
+      <nav id="navbar">
+        <a href="#welcome-section">Welcome</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact-section">Contact me</a>
+      </nav>
+      
+    <main>
+      <section id="welcome-section">
+        <h1 id=title>Hi! I'm <span id="name">Lorenz</span> <span id="subtitle">An aspiring web developer</span></h1>
+      </section>
+      
+      <section id="projects">
+        
+        <h2 id=project-sec-title>Here are my recent projects</h2>
+        
+        <div id="tribute" class="project-div">
+          <a href="https://codepen.io/Elaysea/full/zYEzbXO" target="_blank"><p class="project-tile">Tribute Page</p><img class="project-thumbnail" src="https://i.ibb.co/2KrnK49/tribute-page.png" alt="tribute-page"></a>
+        </div>
+        
+        <div id="survey" class="project-div">
+          <a href="https://codepen.io/Elaysea/full/mdBMRvW" target="_blank"><p class="project-tile">Survey Form</p><img class="project-thumbnail" src="https://i.ibb.co/9h8j6nP/survey.png" alt="survey"></a>
+        </div>
+        
+        <div id="landiing" class="project-div">
+        <a href="https://codepen.io/Elaysea/full/vYeedgr" target="_blank"><p class="project-tile">Product Page</p><img class="project-thumbnail" src="https://i.ibb.co/2Mn4F7v/product-landing-page.png" alt="product-landing-page"></a>
+        </div>
+      </section>
+      <section id="contact-section">
+        <h2>Say Hello @</h2>
+        <a id="profile-link" href="https://github.com/Lorenz-Calub" target="_blank"><i id="icon" class="fab fa-github"></i></a>
+        <a id="profile-link" href="https://www.linkedin.com/in/lorenz-angelo-calub-607093222/" target="_blank"><i id="icon" class="fab fa-linkedin"></i></a>
+        <div>
+        <p class="email">calublorenz@protonmail.com</p>
+        <div>
+      </section>
+    </main>
+  </body>
+</html>
